@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+// #include<windows.h>  //for windows
 using namespace std;
 
 class Node
@@ -289,8 +290,10 @@ void testUrl(ListNode* &head, string &url){
         cout << "Entered url is not present in data!!!\n";
         return;
     }
-    string command = "open " + originalUrl;
-    system(command.c_str());
+    // char* char_arr = &originalUrl[0];                                        //for windows
+    // ShellExecute(NULL, "open", char_arr, NULL, NULL, SW_SHOWNORMAL);         // for windows
+    string command = "open " + originalUrl;                                     //for macOS
+    system(command.c_str());                                                    //for macOS
 }
 
 void program(ListNode *&head)
